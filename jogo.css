@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff0f5;
+  font-family: 'Comic Sans MS', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.titulo {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.game {
+  width: 95%;
+  max-width: 600px;
+  height: 220px;
+  background-color: #fff;
+  border: 4px dashed #f8008c;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  touch-action: manipulation;
+}
+
+#character {
+  font-size: 35px;
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  transition: bottom 0.2s;
+}
+
+#obstacle {
+  font-size: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  animation: obstacleMove 2s linear infinite;
+}
+
+.coin {
+  font-size: 24px;
+  position: absolute;
+  animation: coinMove 3s linear infinite;
+}
+
+@keyframes obstacleMove {
+  0% { left: 100%; }
+  100% { left: -40px; }
+}
+
+@keyframes coinMove {
+  0% { left: 100%; }
+  100% { left: -40px; }
+}
+
+.jump {
+  animation: jump 0.5s ease;
+}
+
+@keyframes jump {
+  0% { bottom: 0; }
+  50% { bottom: 100px; }
+  100% { bottom: 0; }
+}
+
+#gameOver, #winScreen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border: 2px solid #ff6f61;
+  border-radius: 10px;
+  text-align: center;
+  display: none;
+}
+
+#gameOver button, #winScreen button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#score, #coins {
+  position: absolute;
+  top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff1493;
+}
+
+#score {
+  right: 15px;
+}
+
+#coins {
+  left: 15px;
+}
+
+#goal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+  z-index: 999;
+  border-bottom: 2px dashed #ff69b4;
+
+}

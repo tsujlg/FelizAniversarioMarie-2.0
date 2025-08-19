@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Joguinho do Ursinho 🧸</title>
+    <link rel="stylesheet" href="jogo.css">
+</head>
+
+     <H2>Computador: Espaço/Clique Esquerdo do Mouse Para Pular</H2>
+     <h2>Celular: Toque na Tela Para Pular</h2>
+
+
+<body>
+
+    <div class="game" id="game">
+        <div id="goal">Pegue 5 moedas para ganhar o jogo!</div>
+        <div id="character">🧸</div>
+        <div id="obstacle">💣</div>
+        <div id="score">Pontos: 0</div>
+        <div id="coins">Moedas: 0</div>
+
+        <div id="gameOver">
+            Game Over 😭<br>
+            <div id="finalScore"></div>
+            <button onclick="restart()">Tentar de novo</button>
+        </div>
+
+<div id="winScreen">
+    Você conseguiu!!! PARABÉNS💘💘💘<br>
+    <div id="finalScoreWin"></div>
+    
+    <a href="index.html" target="_blank">
+        <button>EU TE AMO!</button>
+    </a>
+    
+</div>
+
+
+    <script src="jogo.js"></script>
+</body>
+</html>
